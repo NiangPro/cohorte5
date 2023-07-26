@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Les formulaires</title>
+</head>
+<body>
+	<fieldset>
+		<legend align="center">Formulaire d'inscription</legend>
+
+	<form>
+		<label for="">Prenom</label><br>
+		<input type="text" placeholder="Veuillez entrer votre prenom"><br>
+		<label for="">Nom</label><br>
+		<input type="text"><br>
+		<label for="">Sexe</label><br>
+		M <input type="radio" name="sexe">
+		F <input type="radio" name="sexe" checked> <br>
+		<label for="">Email</label><br>
+		<input type="email"><br>
+		<label for="">Mot de passe</label><br>
+		<input type="password"><br>
+		<label for="">Langues</label><br>
+		Francais<input type="checkbox">
+		Anglais<input type="checkbox">
+		Italien<input type="checkbox"><br>
+		<label for="">Pays</label><br>
+		<select name="" id="">
+			<option value="">Selectionner un pays</option>
+			<option value="">Senegal</option>
+			<option value="">Gambie</option>
+		</select><br><br>
+		<label for="">Date de naissance</label>
+		<input type="datetime-local">
+		<br>
+		<label for="">Couleur</label>
+		<input type="color"><br>
+		<label for="">Fichier</label>
+		<input type="file"><br>
+		<label for="">Range</label>
+		<input type="range"><br><br>
+		<label for="">Message</label><br>
+		<textarea cols="50" rows="10"></textarea><br>
+		<button>Envoyer</button>
+	</form>
+	</fieldset>
+
+	<details>
+		<summary>Resume</summary>
+		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus animi quisquam expedita nobis maiores, nostrum accusamus omnis facere recusandae maxime.</p>
+	</details>
+</body>
+</html>

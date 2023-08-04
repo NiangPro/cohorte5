@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Les selecteurs avances</title>
+	<style>
+		#para1, #para2{
+			color: green;
+			border: 1px solid #000;
+			text-align: center;
+		}
+
+		#para2::first-letter{
+			color: black;
+
+			font-size: 72px;
+		}
+
+		#mondiv > h1{
+			text-decoration: underline;
+			color: yellow;
+			background-color: purple;
+		}
+
+		form input[type="text"]{
+			width: 300px;
+			outline: none;
+			border-color: black;
+			border-style: solid;
+			border-width: 1px;
+			border-radius: 10px;
+			padding: 10px;
+		}
+
+		form input::placeholder{
+			color: red;
+
+		}
+
+		form input[type="submit"]{
+			border: none;
+			border-radius: 10px;
+			background-color: green;
+			color: white;
+			cursor: pointer;
+		}
+
+		form input[type="submit"]:hover{
+			background-color: lightgreen;
+			transition: 3s;
+			border-right: 5px solid red;
+			border-left: 5px solid red;
+			transform: rotate(360deg);
+		}
+
+		#cercle{
+			width: 200px;
+			height: 200px;
+			background: cyan;
+			border-radius: 50%;
+		}
+	</style>
+</head>
+<body>
+	
+	<p id="para1">
+
+		Lorem, ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, accusantium.
+	</p>
+
+	<div id="mondiv">
+		Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis, maxime fugit, optio nostrum deserunt dolor veritatis quo voluptas cupiditate placeat itaque, fugiat impedit aperiam distinctio in, officia odit enim laborum.
+		<h1>MON TITRE</h1>
+		
+	</div>
+
+	<p id="para2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci, magni veniam.</p>
+
+	<form action="">
+		<label for="">Prenom</label><br>
+		<input type="text" placeholder="Entrer votre prenom"><br>
+		<label for="">Nom</label><br>
+		<input type="text" placeholder="entrer vore nom"><br>
+		<input type="submit" value="Ajouter">
+	</form>
+
+	<div id="cercle"></div>
+</body>
+</html>

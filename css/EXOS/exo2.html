@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>CV</title>
+	<style>
+		body{
+			background: whitesmoke;
+		}
+		#cv{
+			height: 720px;
+			width: 590px;
+			box-shadow: 1px 1px 20px black;
+			margin: auto;
+			padding-left: 40px;
+			padding-right: 40px;
+			background-color: white;
+		}
+		.info-photo{
+			height: 200px;
+			padding: 4px;
+			margin: 30px;
+		}
+		#nom{
+			font-size: 28px;
+			color: darkblue;
+			margin-top: 40px;
+			margin-bottom: 40px;
+		}
+		.info{
+			line-height: 8px;
+		}
+		h3{
+			text-transform: uppercase;
+			border-bottom: 1px solid #000;
+			font-size: 16px;
+		}
+
+		table{
+			border-collapse: collapse;
+			width: 100%;
+		}
+
+		td span{
+			font-weight: bold;
+		}
+
+		#pied{
+			border-top: 1px dotted black;
+			text-align: right;
+		}
+	</style>
+</head>
+<body>
+	<div id="cv">
+		<div class="info-photo">
+			<div>
+				<img align="right" width="140" height="150" src="../../images/img1.jpg" alt="">
+				<p class="info" id="nom">Prenom Nom</p>
+				<p class="info"><b>email</b></p>
+				<p class="info">Telephone</p>
+				<p class="info"><b>Linkedin</b></p>
+				<p class="info">Votre adresse</p>
+			</div>
+			<div class="photo">
+			</div>
+		</div>
+		<h3>parcours universitaires</h3>
+		<p>Il faut inserer des informations sur votre parcours universitaire (ordre chronologique)</p>
+		<table border="1">
+			<tr>
+				<td>[LE DIPLOME], <span>[UNIVERSITE]</span></td>
+			</tr>
+			<tr>
+				<td>[LE DIPLOME], <span>[UNIVERSITE]</span></td>
+			</tr>
+			<tr>
+				<td>[LE DIPLOME], <span>[UNIVERSITE]</span></td>
+			</tr>
+		</table>
+		<h3>competences personnelles</h3>
+		<p>Il faut decrire et ecrire les traits de votre personnalite et vos points forts en quelquels mots. <br>Votre savoir faire et savoir etre.</p>
+		<ul>
+			<li>Leadership.</li>
+			<li>Creativite.</li>
+			<li>...</li>
+		</ul>
+		<h3>competences techniques (option)</h3>
+		<p>Il faut decrire et ecrie ce que vous pouvez faire et competences</p>
+		<ul>
+			<li>Word, Excel.</li>
+			<li>Developpement.</li>
+			<li>...</li>
+		</ul>
+		<p id="pied">Page 1 sur 2</p>
+	</div>
+</body>
+</html>

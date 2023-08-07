@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Les modeles de boite</title>
+	<style>
+		#para{
+			border: 1px solid #000;
+			margin: 20px;
+			margin-top: 200px;
+			margin-left: 50px;
+			padding: 10px;
+			padding-left: 50px;
+		}
+		#lien{
+			border: 1px solid #000;
+			padding: 10px 50px 100px 200px;
+			margin: auto;
+			width: 50px;
+			height: 50px;
+		}
+
+		#contour{
+			width: 50vw;
+			height: 300px;
+			border: 1px solid #000;
+			margin: auto;
+			padding: 50px;
+		}
+
+		#flottant{
+			width: 300px;
+			height: 200px;
+			background: cyan;
+			float: right;
+		}
+
+		label, input{
+			display: block;
+			margin-top: 10px;
+		}
+		#left-part, #right-part{
+			display: inline-block;
+		}
+		#left-part{
+/*			border: 1px solid #000;*/
+			width: 300px;
+			height: 300px;
+		}
+		#right-part{
+/*			border: 1px solid #000;*/
+			width: 300px;
+			height: 300px;
+			margin-left: 50px;
+		}
+	</style>
+</head>
+<body>
+	<p id="para"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, eaque.</p>
+
+	<a href="" id="lien">lien</a>
+
+	<div id="contour">
+		Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit ea, distinctio obcaecati est, quasi praesentium deleniti? Nam, officiis fugiat? Expedita.
+	</div>
+
+	<div id="flottant"></div>
+
+	<form action="">
+		<div id="left-part">
+		<label for="">Prenom</label>
+		<input type="text">
+	</div>
+	<div id="right-part">
+		<label for="">Nom</label>
+		<input type="text">
+	</div>
+		
+	</form>
+
+	
+</body>
+</html>

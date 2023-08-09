@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Formulaire</title>
+	<style>
+		button{
+			color: white;
+		}
+		.contenu{
+/*			border: 1px solid black;*/
+			width: 796px;
+			height: 463px;
+			margin: auto;
+			box-shadow: 1px 1px 10px 7px darkcyan;
+			margin-top: 100px;
+		}
+		.div1{
+			position: relative;
+		    top: -250px;
+		    height: 400px;
+		}
+		.div1, .div2{
+			width: 396px;
+/*			border: 1px solid black;*/
+			display: inline-block;
+		}
+		.div1 .welcom{
+			position: relative;
+    		top: 78px;
+			border: 2px solid white;
+			width: 226px;
+    		height: 170px;
+			margin: auto;
+			padding-left: 20px;
+			text-align: center;
+			padding-right: 20px;
+			color: white;
+		}
+		.welcom h3{
+			text-transform: uppercase;
+			font-weight: bold;
+		}
+		.div2{
+			background-color: darkcyan;
+		}
+		.div2 .form{
+			padding-left: 18px;
+			padding-right: 18px;
+			background-color: rgb(33, 34, 58);
+			width: 275px;
+		    position: relative;
+		    left: 42px;
+		   padding-bottom: 14px;
+		   margin-top: 60px;
+		}
+
+		.form form{
+			position: relative;
+    		top: 12px;
+    		margin-bottom: 12px;
+		}
+
+		.form input{
+			display: block;
+			width: 260px;
+			padding: 6px;
+			background-color: white;
+			border: none;
+			margin-bottom: 20px;
+			border-radius: 5px;
+			outline: none;
+		}
+
+		.form .button{
+			width: 270px;
+			background-color: cyan;
+			padding: 6px;
+			border: none;
+			color: white;
+			border-radius: 5px;
+		}
+		.form a{
+			text-decoration: none;
+			color: #a1a1a1;
+			float: right;
+			margin-bottom: 21px;
+			margin-right: 4px;
+		}
+		.div2 .bordure{
+			width: 270px!important;
+			border-bottom: 1px solid gray;
+			margin-top: 20px;
+		}
+		.div2 .or{
+			text-align: center;
+		}
+		
+		.div2 .or span{
+			margin-right: 9px;
+			color: gray;
+		    margin-top: -21px;
+		    position: relative;
+		    top: -11PX;
+		    background-color: rgb(33,34,58);
+		    padding-left: 5px;
+		    padding-right: 5px;
+		}
+		.sociaux img{
+			width: 25px;
+			height: 25px;
+			align-items: center;
+		}
+		.sociaux{
+			text-align: center;
+			margin-right: 8px;
+		}
+
+		.div2 .by{
+			font-weight: bolder;
+			color: white;
+			text-align: center;
+		}
+		.form h1, .form h3{
+			color: white;
+			text-align: center;
+		}
+		.form h1{
+			font-weight: bolder;
+		}
+		.buttons{
+			float: right;
+			margin-bottom: 20px;
+			margin-right: 10px;
+			margin-top: 10px;
+			color: white;
+		}
+		.login, .password{
+			height: 35px;
+			width: 90px;
+			border: none;
+		}
+		.login{
+			background-color: cyan;
+			border-radius: 15px 0px 0px 15px;
+			margin-left: -72px;
+		    position: relative;
+		    left: 3px;
+		}
+		.password{
+			background-color:gray ;
+			border-radius: 0px 15px 15px 0px;
+
+		}
+ 	</style>
+</head>
+<body bgcolor="cyan">
+	<div class="contenu">
+		<div class="div1">
+			<div class="welcom">
+				<h3>Welcom to logo</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo dignissimos quasi nulla quas rerum, est assume</p>
+			</div>
+		</div>
+		<div class="div2">
+			<div class="buttons">
+				<button class="login">Login</button> <button class="password">Register</button>
+			</div>
+			<div class="form">
+				<form action="">
+					<h1>LOGO</h1>
+					<h3>Sign in into your account</h3>
+					<div>
+						<input type="text" placeholder="Email Adress">
+
+						<input type="password" placeholder="Password">
+
+						<p> <a href="">forget your password</a></p>
+						<button type="submit" class="button">Login</button>
+					</div>
+					<div class="or">
+						<div class="bordure"></div>
+						<span >or</span>
+ 					</div>
+ 					<div class="sociaux">
+ 						<img src="../images/f.png" alt="">
+ 						<img src="../images/t.png" alt="">
+ 						<img src="../images/g.png" alt="">
+ 						<img src="../images/in.png" alt="">
+ 					</div>
+				</form>
+			</div>
+			<p class="by">
+				Developed By HQ Template
+			</p>
+		</div>
+	</div>
+</body>
+</html>

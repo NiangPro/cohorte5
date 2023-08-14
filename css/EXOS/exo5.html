@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+
+
+	<style>
+		body{
+			background: linear-gradient(white, purple);
+			height: 100vh;
+			overflow: hidden;
+		}
+		#cards{
+			width: 90%;
+			height: 400px;
+			margin-top: 100px;
+			margin: auto;
+			display: flex;
+			column-gap: 30px;
+			transform: translateY(70px);
+		}
+
+		.card{
+			width: 25%;
+			height: 100%;
+			background: white;
+			padding-bottom: 20px;
+
+		}
+		.card .card-image{
+			height: 50%;
+		}
+		.card .card-image img{
+			width: 100%;
+			height: 100%;
+
+		}
+
+		.card-body{
+			display: flex;
+			flex-direction: column;
+			align-items:  center;
+		}
+
+		.card-body p{
+			text-align: center;
+		}
+
+		.card-body button{
+			border: none;
+			background: green;
+			color: white;
+			border-radius: 5px;
+			padding: 10px;
+		}
+		h1{
+			transform: translateY(120px);
+			text-align: center;
+			font-weight: bold;
+			font-size: 42px;
+			color: white;
+		}
+
+		.lien a{
+			text-decoration: none;
+			color: white;
+		}
+
+		.lien{
+			transform: translateY(120px);
+			text-align: center;
+
+		}
+	</style>
+</head>
+<body>
+	<div id="cards">
+		<div class="card">
+			<div class="card-image">
+				<img src="../../images/f1.jfif" alt="">
+			</div>
+			<div class="card-body">
+				<h3>title 1</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum harum aperiam. Illum sequi, ea nemo delectus reiciendis dicta corporis.</p>
+				<button>click here</button>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image">
+				<img src="../../images/f2.jfif" alt="">
+			</div>
+			<div class="card-body">
+				<h3>title 2</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum harum aperiam. Illum sequi, ea nemo delectus reiciendis dicta corporis.</p>
+				<button>click here</button>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image">
+				<img src="../../images/f3.jfif" alt="">
+			</div>
+			<div class="card-body">
+				<h3>title 3</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum harum aperiam. Illum sequi, ea nemo delectus reiciendis dicta corporis.</p>
+				<button>click here</button>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-image">
+				<img src="../../images/f4.jfif" alt="">
+			</div>
+			<div class="card-body">
+				<h3>title 4</h3>
+				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deleniti eum harum aperiam. Illum sequi, ea nemo delectus reiciendis dicta corporis.</p>
+				<button>click here</button>
+			</div>
+		</div>
+	</div>
+	<h1>Bootstrap 4 tutorial - Card</h1>
+	<div class="lien">
+		
+	<a href="">webseotips.com</a>
+	</div>
+</body>
+</html>

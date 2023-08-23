@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les variables</title>
+</head>
+<body>
+    
+
+    <script>
+        // definitions 
+        let adresse = "Pikine", tel = "7847574747";
+        let trouve = true;
+        let chaine = "564";
+        // les declarations 
+        let age;
+        var prenom;
+        let nom, sexe;
+
+        // assignation ou affectation 
+        age = 15;
+        prenom = "Thierno Modou";
+
+        // affichage
+        document.write("Prenom : "+prenom+ "<br>"+"Age : "+age);
+        document.write(`Prenom : ${prenom} <br> Age: ${age} ans`)
+
+        // saisie 
+        let  p = prompt("Entrer votre prenom");
+        document.write("Vous avez saisi --->"+p)
+        console.log(typeof p);
+
+        //le type d'une variable
+        console.log(typeof(chaine));
+        // conversion 
+        let new_integer = parseInt(chaine);
+        console.log(typeof new_integer.toString());
+
+        // les operations 
+        let a = 2, b = 5;
+        let produit = a*b;
+        let sous = b - a;
+        let addition = a+b;
+        let division = b / a;
+        let divEntier = parseInt(division);
+        let modulo = b%a;
+        console.log(modulo);
+    </script>
+</body>
+</html>

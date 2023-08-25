@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let choix = prompt(`
+            ******** PLAT DU JOUR ********
+            1 ---> Thiébou Djeun        
+            2 ---> Maffé        
+            3 ---> Yassa
+            Faites votre choix        
+        `);
+        switch (choix) {
+            case "1":
+                document.write("Vous avez choisi thiébou djeun")
+                break;
+            case "2":
+                document.write("Vous avez choisi maffé")
+                break;
+            case "3":
+                document.write("Vous avez choisi yassa")
+                break;
+            default:
+                document.write("Choix indisponible pour le moment !");
+                break;
+        }
+    </script>
+</body>
+
+</html>

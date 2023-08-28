@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let chiffre = prompt(`
+        Menu principal
+        1 Sports
+        2 Couleur
+        3 Musique
+        `);
+
+        switch (chiffre) {
+            case "1":
+                let sports = prompt(`
+                a Football 
+                b Basketball
+                `);
+                switch (sports) {
+                    case "a":
+                        let genre = prompt(`
+                        1 Homme 
+                        2 Femme
+                        `);
+                        switch (genre) {
+                            case "1":
+                                document.write("Homme");
+                                break;
+                            case "2":
+                                document.write("Femme");
+                                break;
+
+                            default:
+                                document.write("Désolé ce choix n'existe pas !");
+                                break;
+                        }
+                        break;
+                    case "b":
+                        document.write(`Basketball`);
+                        break;
+
+                    default:
+                        document.write("Désolé ce choix n'existe pas !");
+                        break;
+                }
+                break;
+            case "2":
+                let couleur = prompt(`
+                1 Vert
+                2 Orange
+                `);
+                switch (couleur) {
+                    case "1":
+                        document.write("Vert");
+                        break;
+                    case "2":
+                        document.write("Orange");
+                        break;
+
+                    default:
+                        document.write("Désolé ce couleur n'existe pas !");
+                        break;
+                }
+                break;
+            case "3":
+                let musique = prompt(`
+                a Mbalax
+                b Reggae`);
+                switch (musique) {
+                    case "a":
+                        document.write("Mbalax");
+                        break;
+                    case "b":
+                        document.write("Reggae");
+                        break;
+
+                    default:
+                        document.write("Désolé ce choix n'est pas disponibe");
+                        break;
+                }
+                break;
+
+            default:
+                document.write("Désolé ce choix n'existe pas !");
+                break;
+        }
+
+
+
+    </script>
+</body>
+
+</html

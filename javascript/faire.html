@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Faire et faire tant que</title>
+</head>
+
+<body>
+    <script>
+        let nombre = parseInt(prompt("Entrer un nombre"))
+
+        // initialisation
+        let i = 1;
+        document.write(`La table de multiplication de ${nombre}est :<br>`);
+
+        while (i <= 10) {
+            // instructions 
+            document.write(`${nombre} x ${i} = ${nombre * i}<br>`);
+            // incrementation
+            i++;
+            // i = i+1;
+            // i += 1;
+        }
+
+        let j = 1;
+
+        do {
+            j++;
+            document.write(j);
+        } while (j < 10);
+
+        let n = 5;
+
+        let m = ++n;
+        let y = n++;
+        document.write(`${m}`);
+        document.write(`${y}`);
+    </script>
+</body>
+
+</html>

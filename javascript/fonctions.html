@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les fonctions en javascript</title>
+</head>
+<body>
+    
+    <script>
+        // declaration des fonctions 
+        function direBonjour(){
+            alert("Bonjour tout le monde :)");
+        }
+
+        function direBonjourNom(nom, prenom){
+            alert(`Bonjour ${prenom} ${nom}`)
+        }
+
+        function somme(a, b){
+            // document.write(`${a} + ${b} = ${a+b}`)
+                   return a+b;
+        }
+
+        function sommeProduit(a, x, y){
+            let r = somme(a, x) * y;
+            document.write(`(${a} + ${x}) x ${y} = ${r}`)
+
+        }
+
+        // les fonctions flêchées 
+        let produit = (a, b)=>{
+            alert(`${a} x ${b} = ${a*b}`);
+        }
+
+        // fonction anonyme 
+        let difference = function(a, b){
+            alert(`${a} - ${b} = ${a-b}`);
+        }
+
+        // appel des fonctions 
+        // direBonjour();
+        // direBonjourNom( "Modou","Niang");
+        sommeProduit(5, 9, 2);
+        produit(5, 2);
+        difference(5, 2);
+    </script>
+</body>
+</html>

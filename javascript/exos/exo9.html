@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function premierParfait(nombre){
+            let cpt=0, som=0, i=1;
+            while(i < nombre){
+                if(nombre % i == 0){
+                    som+=i;
+                    cpt+=1;
+                }
+                i++;
+            }
+
+            if(cpt == 1 || nombre == 1)
+                document.write(`${nombre} est premier <br>`);
+            else
+                document.write(`${nombre} n'est pas premier <br>`);
+
+            if(som == nombre)
+                document.write(`${nombre} est parfait <br>`);
+            else
+                document.write(`${nombre} n'est pas parfait <br>`);
+        }
+
+        let val = parseInt(prompt("Veuiller saisir un nombre svp !"));
+        premierParfait(val);
+    </script>
+</body>
+</html>

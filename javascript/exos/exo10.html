@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const factoriel = (nombre)=>{
+            let fact = 1, affiche = "";
+            if (nombre < 0) {
+                document.write("Impossible de determiner le factoriel d'un nombre negatif")
+            }else if(nombre == 0 || nombre == 1){
+                    document.write(`${nombre}!= ${fact}`)
+            }else{
+                for (let i = 1; i <= nombre; i++) {
+                    affiche = nombre == i ? affiche +i : affiche +i+"x";
+                    fact *= i;
+                }
+                document.write(`${nombre}!=${affiche} = ${fact}`)
+            }  
+        }
+        let n = parseInt(prompt("Veuillez saisir un nombre"))
+        factoriel(n);
+    </script>
+</body>
+</html>

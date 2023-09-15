@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let nbVoyelles = (chaine)=>{
+            let newc = chaine.toLowerCase();
+        
+            let cpt = 0;
+            for (let i = 0; i < newc.length; i++) {
+                if (newc[i] == "a" || newc[i] == "i" || newc[i] == "o" ||newc[i] == "e" ||newc[i] == "u" ||newc[i] == "y" ) {
+                    cpt++;
+                }
+            }
+
+            document.write(`"${chaine}" comporte ${cpt} voyelle (s)`);
+        }
+        
+        let chaine = prompt("Veuillez saisir une chaine de caractères");
+        nbVoyelles(chaine);
+        </script>
+</body>
+</html>

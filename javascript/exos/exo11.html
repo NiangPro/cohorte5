@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        let tel;
+        let trouve = true;
+        while(trouve == true){
+            trouve = false;
+            tel = prompt("Veuillez saisir un numéro de telephone");
+                // verifier le numero de telephone s'il comporte des lettres ou pas
+                for (let i = 0; i < tel.length; i++) {
+                    if (tel[i] != "0" && tel[i] != "1" && tel[i] != "2" &&tel[i] != "3" && tel[i] != "4" && tel[i] != 5 && tel[i] != 6 && tel[i] != 7 && tel[i] != "8" && tel[i] != "9") {
+                        trouve = true;
+                    }
+                }
+
+                // verifier la taille du numero
+                if (tel.length != 9) {
+                    trouve = true;
+                }
+
+                // verifier le commencement d'un numero de telephone
+                if (!tel.startsWith(70) && tel.substr(0, 2) != "75" && tel.substr(0, 2) != "76" && tel.substr(0, 2) != "77" && tel.substr(0, 2) != "78" && tel.substr(0, 2) != "33") {
+                        trouve = true;
+                    }
+
+        }
+
+        document.write(`${tel} => ${tel.substring(0, 4).padEnd(7, "*")}${tel.substring(7)}`)
+
+    </script>
+</body>
+</html>

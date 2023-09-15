@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux en javascript</title>
+</head>
+<body>
+    <script>
+        let tab = Array("modou", "alioune", 56);
+        let tab2 = [23, 6, 78, 0];
+
+        console.log(tab.at(1)); 
+        console.log(tab[tab.length -1]);
+
+        
+        // pour ajouter dans un tableau 
+        tab.push("fatou")
+        tab.unshift("Demba")
+        tab.splice(1,0, "Thierno")
+        tab.splice(3, 1, "Shelby")
+
+        // suppression 
+        tab.pop()
+        tab.shift();
+
+        // inverser les données d'un tableau 
+        tab.reverse();
+
+        // trier un tableau 
+        tab2.sort((a , b) =>  b - a)
+
+        // convertir un tableau en une chaine de caracteres 
+        let chaine = tab.join("*")
+
+        // convertir une chaine de caracteres en tableau 
+        let ntab = chaine.split("*")
+
+        ntab.forEach((valeur, ind) => document.write(`${valeur} - `))
+
+        console.log(ntab.find(value =>{
+            if (value.includes("n")) {
+                console.log(value);
+            }
+        })); 
+
+        document.write(chaine)
+        </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let chaine = prompt("Entrer une chaine");
+
+        let newc = "";
+        for (let i = chaine.length - 1; i >= 0; i--) {
+            newc += chaine[i];
+        }
+
+        if (chaine.toLowerCase() == newc.toLowerCase()) {
+            document.write(`${chaine} est  palyndrome`)
+        }else{
+            document.write(`${chaine} n'est pas  palyndrome`)
+
+        }
+    </script>
+</body>
+</html>

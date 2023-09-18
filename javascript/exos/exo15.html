@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let tab = []
+        let taille = parseInt(prompt("Entrer la taille du tableau"))
+
+        for (let i = 0; i < taille; i++) {
+            tab.push(prompt(`Entrer la valeur ${i+1}`))
+        }
+
+
+
+        tab.forEach(val => {
+            if (val == (parseInt(Math.sqrt(val)) * parseInt(Math.sqrt(val)))) {
+                document.write(val + "     ")
+            }
+        })
+
+        console.log(tab);
+    </script>
+</body>
+</html>

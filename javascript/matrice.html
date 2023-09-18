@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les matrices en javascript</title>
+</head>
+<body>
+    <script>
+        let matrice = [
+            [10, "Diallo", 17],
+            ["seck", "html", "ndiaye"],
+            [15.5, "diouf", "mbaye"]
+        ];
+
+        document.write("<table border='1'>");
+        for (let row = 0; row < matrice.length; row++) {
+            document.write("<tr>")
+            for (let col = 0; col <matrice[row].length; col++) {
+                document.write("<td>"+matrice[row][col]+"</td> ")
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+
+
+        // document.write("<table border='1'>")
+        // matrice.forEach(tab => { 
+        //     document.write("<tr>")
+        //     tab.forEach(valeur => document.write("<td>"+valeur + "</td>"));
+        //     document.write("</tr>")
+        // })
+        // document.write("</table>")
+
+        
+    </script>
+</body>
+</html>

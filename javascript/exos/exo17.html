@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let taille = parseInt(prompt("Entrer la taille du tableau"))
+
+        let tab = [];
+        for (let i = 0; i < taille; i++) {
+            tab.push(prompt(`Entrer la valeur ${i+1} du tableau`))
+        }
+
+        let afficheTableau = (tab, titre)=>{
+            document.write(`<h3>${titre}</h3>`);
+            document.write(`<table border="1">`);
+                document.write(`<tr>`);
+                    tab.forEach(val => document.write(`<td>${val}</td>`))
+                document.write(`</tr>`);
+            document.write(`</table>`);
+        }
+
+        afficheTableau(tab, "Affichage avant décalage")
+
+        let tempon = tab[taille -1]
+        for (let i = taille - 1; i >= 1; i--) {
+            tab[i] = tab[i-1]           
+        }
+        tab[0] = tempon;
+        afficheTableau(tab, "Affichage apres décalage")
+    </script>
+</body>
+</html>

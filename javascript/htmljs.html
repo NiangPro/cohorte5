@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intégration du html</title>
+</head>
+<body>
+    
+    <a href="https://facebook.com" id="lien"  class="link">Cliquer pour surfer sur facebook
+        <span>sous texte</span>
+    </a>
+    <button type="button" id="btn">Changer la couleur</button>
+    <p class="para">Lorem ipsum dolor sit amet.</p>
+    <p class="para">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur id exercitationem soluta odio quod voluptatem laborum, repellat neque sit! Est illo nulla veritatis quae optio. Officiis vero aliquam deleniti repellendus.</p>
+    <script>
+        let lien = document.getElementById("lien")
+        let btn = document.getElementById("btn")
+        let pgs = document.getElementsByClassName("para")
+
+        lien.target = "_blank"
+        lien.href = "https://sunucode.com"
+        lien.style.textDecoration = "none"
+
+        console.log(lien.innerHTML);
+        lien.innerText = "cliquer pour surfer sur youtube"
+        // console.log(lien.innerText);
+        console.log(pgs);
+
+        console.log(pgs[1].innerText);
+
+        btn.addEventListener("click" , function(){
+            lien.style.backgroundColor = "red"
+        })
+    </script>
+</body>
+</html>

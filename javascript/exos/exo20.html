@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom{
+            text-decoration: none;
+            border-radius: 15px;
+            color: wheat;
+            background: #000;
+            box-shadow: 3px 3px 5px orange;
+            padding: 10px;
+        }
+
+        .new{
+            border-left: 15px double green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Mon texte</h1>
+    <a href="" class="custom" id="lien">Youtube</a>
+    <script>
+        let lien = document.getElementById("lien")
+
+        lien.classList.add("new")
+    </script>
+</body>
+</html>

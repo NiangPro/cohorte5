@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .custom{
+            text-decoration: none;
+            border-radius: 15px;
+            box-shadow: 3px 3px 5px orange;
+            padding: 10px;
+            background: #000;
+            color: wheat;
+        }
+        .new{
+            border-left: 15px double green;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="titre">Mon texte</h1>
+    <a id="lien" class="custom" href="htpps://google.com">Google</a>
+
+    <script>
+        let lien = document.getElementById("lien")
+        let titre = document.getElementById("titre")
+
+        console.log(lien.innerText);
+        console.log(titre.innerText);
+
+        // lien.href = "https://facebook.com"
+        lien.setAttribute("href", "https://facebook.com")
+        lien.innerHTML = "Youtube"
+
+        // lien.className = "new";
+        lien.classList.add("new")
+
+        // lien.classList.remove("custom")
+
+        console.log(lien.href);
+        console.log(lien.getAttribute("href"));
+    </script>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .title{
+            text-decoration: underline;
+            color:cyan;
+            font-size: 34px;
+        }
+    </style>
+</head>
+<body>
+    <div id="global"><h1 id="title">0</h1>
+        <a href="">mon lien</a></div>
+        <button id="btn" onclick="changer('8')">8</button>
+
+    <script>
+        let global = document.getElementById("global");
+        let btn = document.getElementById("btn")
+        let title = document.getElementById("title")
+
+        let lien = global.lastChild;
+        let titre = lien.previousSibling.previousSibling;
+
+        let span = document.createElement("span");
+        // let textSpan = document.createTextNode("Mon span")
+        // span.appendChild(textSpan)
+        span.appendChild(document.createTextNode("Mon span en js"))
+        span.style.color = "red"
+
+        global.appendChild(span);
+        console.log(titre);
+
+        // btn.addEventListener("keypress", function(e){
+        //     console.log(e.keyCode);
+        //     if (title) {
+                
+        //         // title.style.color = "green"
+        //         title.classList.add("title")
+        //     }
+        // })
+
+        function changer(valeur){
+            if (title) {
+                
+                title.innerText = title.innerText +valeur
+            }
+        }
+    </script>
+</body>
+</html>

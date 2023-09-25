@@ -1,0 +1,59 @@
+body{
+    background: rgb(237, 246, 254);
+}
+#calculatrice{
+    height: 370px;
+    width: 240px;
+    box-shadow: 3px 3px 5px  rgb(156, 156, 156), -4px -4px 5px  white;
+    margin: auto;
+    margin-top: 50px;
+    border-radius: 10px;
+    padding: 20px;
+}
+
+#entete{
+    height: 50px;
+    box-shadow: inset 2px 2px 5px rgb(156, 156, 156) ,inset -3px -3px 3px  white;
+    text-align: right;
+    line-height: 45px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+#touches{
+    margin-top: 40px;
+    height: 280px;
+    display: flex;
+    flex-wrap: wrap;
+    column-gap: 25px;
+}
+
+#touches .btn{
+    height: 40px;
+    width: 40px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(237, 246, 254);
+    box-shadow: 3px 3px 5px  rgb(156, 156, 156), -4px -4px 5px  white;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#touches .btn:hover{
+    transition: .6s;
+    box-shadow: -4px -4px 5px  white, 3px 3px 5px  rgb(156, 156, 156);
+
+
+}
+
+#touches .btn-dark{
+    background: #000;
+    color: white;
+}
+
+#touches .btn-red{
+    background: red;
+    color: white;
+}

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <link rel="stylesheet" href="../bootstrap/assets/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="card container col-md-6">
+        <div class="card-header text-center bg-warning">Interaction d'un formulaire en javascript</div>
+        <div class="card-body">
+            <div class="row">
+                <div class="col-md-6 form-group">
+                    <label for="">Prenom</label>
+                    <input type="text" id="prenom" class="form-control">
+                </div>
+                <div class="col-md-6 form-group" id="formNom">
+                    <label for="">Nom</label>
+                    <input type="text" id="nom" class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="">Tel</label>
+                    <input type="tel" id="tel" class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="">Adresse</label>
+                    <input type="text" id="adresse" class="form-control">
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="">Sexe</label><br>
+                    M<input type="radio" value="Homme" name="sexe" >
+                    F<input type="radio" value="Femme" name="sexe" >
+                </div>
+                <div class="col-md-6 form-group">
+                    <label for="">Pays</label><br>
+                   <select name="pays" id="pays" class="form-control">
+                    <option value="">Veuillez selectionner un pays</option>
+                    <option value="Senegal">Senegal</option>
+                    <option value="Mali">Mali</option>
+                    <option value="ETHIOPIE">ETHIOPIE</option>
+                    <option value="GAMBIE">GAMBIE</option>
+                   </select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-outline-success">Ajouter</button>
+            <button type="reset" class="btn btn-outline-danger">Annuler</button>
+        </div>
+    </div>
+
+
+    <script src="../bootstrap/assets/bootstrap.bundle.min.js"></script>
+
+    <script>
+        let prenom = document.getElementById("prenom");
+        let nom = document.getElementById("nom");
+        let tel = document.getElementById("tel");
+        let pays = document.getElementById("pays");
+        let formNom = document.getElementById("formNom");
+        let sexes = document.getElementsByName("sexe");
+
+        formNom.style.visibility = "hidden"
+
+        tel.value = "783474747"
+        // tel.readOnly = true
+        tel.disabled = true
+
+
+        prenom.addEventListener("keyup", function(){
+        console.log(pays.options[pays.selectedIndex].value);
+
+            console.log(prenom.value);
+            if (prenom.value) {
+                
+                formNom.style.visibility = "visible"
+            }else{
+                formNom.style.visibility = "hidden"
+
+            }
+
+            for (let i = 0; i < sexes.length; i++) {
+            if (sexes[i].checked) {
+                console.log(sexes[i].value);
+            }
+        }
+        })
+    </script>
+</body>
+</html>

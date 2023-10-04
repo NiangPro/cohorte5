@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../bootstrap/assets/bootstrap.min.css">
+</head>
+<body>
+    
+    <div class="container card col-md-6 mt-4">
+        <div class="card-header text-center bg-warning">
+            Interaction d'un formulaire en javascript
+        </div>
+        <div class="card-body">
+            <form action="" id="form">
+                <div class="row">
+                    <div class="form-group col-md-6">
+                        <label for="">Prenom</label>
+                        <input type="text" id="prenom" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6" id="nomfield">
+                        <label for="">Nom</label>
+                        <input type="text" id="nom" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6" id="telfield">
+                        <label for="">Tel</label>
+                        <input type="text" id="tel" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6" id="adressefield">
+                        <label for="">Adresse</label>
+                        <input type="text" id="adresse" class="form-control">
+                    </div>
+                    <div class="form-group col-md-6" id="sexefield">
+                        <label for="">Sexe</label><br>
+                        M <input type="radio" onfocus="afficherPays()" value="Homme" name="sexe">
+                        F <input type="radio" onfocus="afficherPays()" value="Femme" name="sexe">
+                    </div>
+                    <div class="form-group col-md-6" id="paysfield">
+                        <label for="">Pays</label>
+                        <select name="pays" id="pays" class="form-control">
+                            <option value="">Veuillez selectionner un pays</option>
+                            <option value="Sénégal">Sénégal</option>
+                            <option value="Mali">Mali</option>
+                            <option value="Guinée">Guinée</option>
+                            <option value="Gambie">Gambie</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="group-btn" id="groupBtn">
+                    <button class="btn btn-outline-success" type="submit">Ajouter</button>
+                    <button class="btn btn-outline-danger" type="reset">Annuler</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="../../bootstrap/assets/bootstrap.bundle.min.js"></script>
+    <script>
+        let form = document.getElementById("form")
+        let prenom = document.getElementById("prenom")
+        let nom = document.getElementById("nom")
+        let tel = document.getElementById("tel")
+        let sexe = document.getElementsByName("sexe")
+        let adresse = document.getElementById("adresse")
+        let nomfield = document.getElementById("nomfield")
+        let telfield = document.getElementById("telfield")
+        let adressefield = document.getElementById("adressefield")
+        let paysfield= document.getElementById("paysfield")
+        let groupBtn = document.getElementById("groupBtn")
+
+        nomfield.style.visibility = "hidden"
+        telfield.style.visibility = "hidden"
+        adressefield.style.visibility = "hidden"
+        sexefield.style.visibility = "hidden"
+        paysfield.style.visibility = "hidden"
+        groupBtn.style.visibility = "hidden"
+
+
+        form.addEventListener("submit", ()=>{
+            document.write(`
+            Prenom: ${prenom.value} <br>
+            Nom: ${nom.value}<br>
+            Tel: ${tel.value}<br>
+            Adresse: ${adresse.value}<br>
+            Sexe: ${sexe[0].checked ? sexe[0].value : sexe[1].value}<br>
+            Pays: ${pays.options[pays.selectedIndex].value}<br>
+            `)
+        })
+        prenom.addEventListener("keyup", ()=>{
+            pasVide(prenom, nomfield)
+        })
+
+        nom.addEventListener("keyup", ()=>{
+            pasVide(nom, telfield)
+            afficherBouton()
+        })
+
+        tel.addEventListener("keyup", ()=>{
+            pasVide(tel, adressefield)
+            afficherBouton()
+        })
+
+        adresse.addEventListener("keyup", ()=>{
+            pasVide(adresse, sexefield)
+            afficherBouton()
+        })
+
+        pays.addEventListener("change", ()=>{
+            pasVide(pays.options[pays.selectedIndex], groupBtn)
+            afficherBouton()
+        })
+
+        function afficherPays(){
+           paysfield.style.visibility = "visible"
+           afficherBouton()
+        }
+
+        function pasVide(champ, champCible){
+            if (champ.value) {
+                champCible.style.visibility = "visible"
+            }else{
+                champCible.style.visibility = "hidden"
+            }
+        }
+
+        function afficherBouton(){
+            if (prenom.value && nom.value && adresse.value && tel.value && pays.options[pays.selectedIndex].value) {
+                groupBtn.style.visibility = "visible"
+            }else{
+                groupBtn.style.visibility = "hidden"
+            }
+        }
+    </script>
+</body>
+</html>
